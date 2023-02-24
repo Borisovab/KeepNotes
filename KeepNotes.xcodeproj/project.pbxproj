@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		006A2B2029A8F13500E2B7DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B1F29A8F13500E2B7DC /* AppDelegate.swift */; };
+		006A2B2429A8F13500E2B7DC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B2329A8F13500E2B7DC /* LoginViewController.swift */; };
+		006A2B2729A8F13500E2B7DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006A2B2529A8F13500E2B7DC /* Main.storyboard */; };
+		006A2B2A29A8F13500E2B7DC /* KeepNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B2829A8F13500E2B7DC /* KeepNotes.xcdatamodeld */; };
+		006A2B2C29A8F13700E2B7DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 006A2B2B29A8F13700E2B7DC /* Assets.xcassets */; };
+		006A2B2F29A8F13700E2B7DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006A2B2D29A8F13700E2B7DC /* LaunchScreen.storyboard */; };
+		006A2B3D29A8F5D500E2B7DC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B3C29A8F5D500E2B7DC /* Coordinator.swift */; };
+		006A2B3F29A8F61E00E2B7DC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B3E29A8F61E00E2B7DC /* AppCoordinator.swift */; };
+		006A2B4229A8F72C00E2B7DC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B4129A8F72C00E2B7DC /* User.swift */; };
+		006A2B4629A8F80200E2B7DC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B4529A8F80200E2B7DC /* LoginViewModel.swift */; };
+		006A2B4929A8F83200E2B7DC /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B4829A8F83200E2B7DC /* Dynamic.swift */; };
+		006A2B4C29A8FFD200E2B7DC /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B4B29A8FFD200E2B7DC /* Adapter.swift */; };
+		006A2B5029A903B000E2B7DC /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B4F29A903B000E2B7DC /* ScheduleViewController.swift */; };
+		006A2B5229A904A900E2B7DC /* LoginVC+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B5129A904A900E2B7DC /* LoginVC+constraints.swift */; };
+		006A2B5529A9051200E2B7DC /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B5429A9051200E2B7DC /* ScheduleViewModel.swift */; };
+		006A2B5729A9067D00E2B7DC /* ScheduleVC+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B5629A9067D00E2B7DC /* ScheduleVC+constraints.swift */; };
+		006A2B5929A9096E00E2B7DC /* LoginVC+enterButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B5829A9096E00E2B7DC /* LoginVC+enterButtonAction.swift */; };
+		78BAF91519EFCC9CB05FB8C9 /* Pods_KeepNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1241DB87849059A5E60707DF /* Pods_KeepNotes.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		006A2B1C29A8F13500E2B7DC /* KeepNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		006A2B1F29A8F13500E2B7DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		006A2B2329A8F13500E2B7DC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		006A2B2629A8F13500E2B7DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		006A2B2929A8F13500E2B7DC /* KeepNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KeepNotes.xcdatamodel; sourceTree = "<group>"; };
+		006A2B2B29A8F13700E2B7DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		006A2B2E29A8F13700E2B7DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		006A2B3029A8F13700E2B7DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		006A2B3C29A8F5D500E2B7DC /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		006A2B3E29A8F61E00E2B7DC /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		006A2B4129A8F72C00E2B7DC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		006A2B4529A8F80200E2B7DC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		006A2B4829A8F83200E2B7DC /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		006A2B4B29A8FFD200E2B7DC /* Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
+		006A2B4F29A903B000E2B7DC /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		006A2B5129A904A900E2B7DC /* LoginVC+constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+constraints.swift"; sourceTree = "<group>"; };
+		006A2B5429A9051200E2B7DC /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		006A2B5629A9067D00E2B7DC /* ScheduleVC+constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScheduleVC+constraints.swift"; sourceTree = "<group>"; };
+		006A2B5829A9096E00E2B7DC /* LoginVC+enterButtonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+enterButtonAction.swift"; sourceTree = "<group>"; };
+		1241DB87849059A5E60707DF /* Pods_KeepNotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepNotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EC25AA76486C9A9C5E89296 /* Pods-KeepNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepNotes.release.xcconfig"; path = "Target Support Files/Pods-KeepNotes/Pods-KeepNotes.release.xcconfig"; sourceTree = "<group>"; };
+		9B4B53CE1BB7CAC4F8086195 /* Pods-KeepNotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepNotes.debug.xcconfig"; path = "Target Support Files/Pods-KeepNotes/Pods-KeepNotes.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		006A2B1929A8F13500E2B7DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78BAF91519EFCC9CB05FB8C9 /* Pods_KeepNotes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		006A2B1329A8F13500E2B7DC = {
+			isa = PBXGroup;
+			children = (
+				006A2B1E29A8F13500E2B7DC /* KeepNotes */,
+				006A2B1D29A8F13500E2B7DC /* Products */,
+				AADBE5A8E4B8E9FA7A667BBF /* Pods */,
+				C9B79CB66DEC3D2C68D57932 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		006A2B1D29A8F13500E2B7DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B1C29A8F13500E2B7DC /* KeepNotes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		006A2B1E29A8F13500E2B7DC /* KeepNotes */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B3A29A8F51700E2B7DC /* Models */,
+				006A2B3829A8F4EF00E2B7DC /* Coordinators */,
+				006A2B3729A8F4D100E2B7DC /* ViewModels */,
+				006A2B3629A8F4CA00E2B7DC /* Views */,
+				006A2B1F29A8F13500E2B7DC /* AppDelegate.swift */,
+				006A2B2B29A8F13700E2B7DC /* Assets.xcassets */,
+				006A2B3029A8F13700E2B7DC /* Info.plist */,
+				006A2B2829A8F13500E2B7DC /* KeepNotes.xcdatamodeld */,
+			);
+			path = KeepNotes;
+			sourceTree = "<group>";
+		};
+		006A2B3629A8F4CA00E2B7DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B4D29A9035600E2B7DC /* LoginVC */,
+				006A2B4E29A9036000E2B7DC /* ScheduleVC */,
+				006A2B4A29A8FFC000E2B7DC /* Protocols */,
+				006A2B3B29A8F52300E2B7DC /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		006A2B3729A8F4D100E2B7DC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B5329A904FB00E2B7DC /* ScheduleViewModel */,
+				006A2B4729A8F81E00E2B7DC /* Bindings */,
+				006A2B4329A8F7E100E2B7DC /* loginViewModel */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		006A2B3829A8F4EF00E2B7DC /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B3E29A8F61E00E2B7DC /* AppCoordinator.swift */,
+				006A2B3929A8F50100E2B7DC /* Protocols */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		006A2B3929A8F50100E2B7DC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B3C29A8F5D500E2B7DC /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		006A2B3A29A8F51700E2B7DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B4029A8F72000E2B7DC /* User */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		006A2B3B29A8F52300E2B7DC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B2529A8F13500E2B7DC /* Main.storyboard */,
+				006A2B2D29A8F13700E2B7DC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		006A2B4029A8F72000E2B7DC /* User */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B4129A8F72C00E2B7DC /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		006A2B4329A8F7E100E2B7DC /* loginViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B4529A8F80200E2B7DC /* LoginViewModel.swift */,
+			);
+			path = loginViewModel;
+			sourceTree = "<group>";
+		};
+		006A2B4729A8F81E00E2B7DC /* Bindings */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B4829A8F83200E2B7DC /* Dynamic.swift */,
+			);
+			path = Bindings;
+			sourceTree = "<group>";
+		};
+		006A2B4A29A8FFC000E2B7DC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B4B29A8FFD200E2B7DC /* Adapter.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		006A2B4D29A9035600E2B7DC /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B2329A8F13500E2B7DC /* LoginViewController.swift */,
+				006A2B5129A904A900E2B7DC /* LoginVC+constraints.swift */,
+				006A2B5829A9096E00E2B7DC /* LoginVC+enterButtonAction.swift */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		006A2B4E29A9036000E2B7DC /* ScheduleVC */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B4F29A903B000E2B7DC /* ScheduleViewController.swift */,
+				006A2B5629A9067D00E2B7DC /* ScheduleVC+constraints.swift */,
+			);
+			path = ScheduleVC;
+			sourceTree = "<group>";
+		};
+		006A2B5329A904FB00E2B7DC /* ScheduleViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B5429A9051200E2B7DC /* ScheduleViewModel.swift */,
+			);
+			path = ScheduleViewModel;
+			sourceTree = "<group>";
+		};
+		AADBE5A8E4B8E9FA7A667BBF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B4B53CE1BB7CAC4F8086195 /* Pods-KeepNotes.debug.xcconfig */,
+				6EC25AA76486C9A9C5E89296 /* Pods-KeepNotes.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C9B79CB66DEC3D2C68D57932 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1241DB87849059A5E60707DF /* Pods_KeepNotes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		006A2B1B29A8F13500E2B7DC /* KeepNotes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 006A2B3329A8F13700E2B7DC /* Build configuration list for PBXNativeTarget "KeepNotes" */;
+			buildPhases = (
+				B7CDB7799A867C536DC73BD2 /* [CP] Check Pods Manifest.lock */,
+				006A2B1829A8F13500E2B7DC /* Sources */,
+				006A2B1929A8F13500E2B7DC /* Frameworks */,
+				006A2B1A29A8F13500E2B7DC /* Resources */,
+				357286DCF12B85C1D6D388BB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeepNotes;
+			productName = KeepNotes;
+			productReference = 006A2B1C29A8F13500E2B7DC /* KeepNotes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		006A2B1429A8F13500E2B7DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					006A2B1B29A8F13500E2B7DC = {
+						CreatedOnToolsVersion = 13.4;
+					};
+				};
+			};
+			buildConfigurationList = 006A2B1729A8F13500E2B7DC /* Build configuration list for PBXProject "KeepNotes" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 006A2B1329A8F13500E2B7DC;
+			productRefGroup = 006A2B1D29A8F13500E2B7DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				006A2B1B29A8F13500E2B7DC /* KeepNotes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		006A2B1A29A8F13500E2B7DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				006A2B2F29A8F13700E2B7DC /* LaunchScreen.storyboard in Resources */,
+				006A2B2C29A8F13700E2B7DC /* Assets.xcassets in Resources */,
+				006A2B2729A8F13500E2B7DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		357286DCF12B85C1D6D388BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KeepNotes/Pods-KeepNotes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KeepNotes/Pods-KeepNotes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KeepNotes/Pods-KeepNotes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7CDB7799A867C536DC73BD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KeepNotes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		006A2B1829A8F13500E2B7DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				006A2B5229A904A900E2B7DC /* LoginVC+constraints.swift in Sources */,
+				006A2B3D29A8F5D500E2B7DC /* Coordinator.swift in Sources */,
+				006A2B4C29A8FFD200E2B7DC /* Adapter.swift in Sources */,
+				006A2B2A29A8F13500E2B7DC /* KeepNotes.xcdatamodeld in Sources */,
+				006A2B4229A8F72C00E2B7DC /* User.swift in Sources */,
+				006A2B5729A9067D00E2B7DC /* ScheduleVC+constraints.swift in Sources */,
+				006A2B3F29A8F61E00E2B7DC /* AppCoordinator.swift in Sources */,
+				006A2B5029A903B000E2B7DC /* ScheduleViewController.swift in Sources */,
+				006A2B5529A9051200E2B7DC /* ScheduleViewModel.swift in Sources */,
+				006A2B5929A9096E00E2B7DC /* LoginVC+enterButtonAction.swift in Sources */,
+				006A2B2429A8F13500E2B7DC /* LoginViewController.swift in Sources */,
+				006A2B4929A8F83200E2B7DC /* Dynamic.swift in Sources */,
+				006A2B2029A8F13500E2B7DC /* AppDelegate.swift in Sources */,
+				006A2B4629A8F80200E2B7DC /* LoginViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		006A2B2529A8F13500E2B7DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				006A2B2629A8F13500E2B7DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		006A2B2D29A8F13700E2B7DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				006A2B2E29A8F13700E2B7DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		006A2B3129A8F13700E2B7DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		006A2B3229A8F13700E2B7DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		006A2B3429A8F13700E2B7DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B4B53CE1BB7CAC4F8086195 /* Pods-KeepNotes.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZJHZJYQRGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KeepNotes/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FirstProject.playground.KeepNotes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		006A2B3529A8F13700E2B7DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EC25AA76486C9A9C5E89296 /* Pods-KeepNotes.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZJHZJYQRGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KeepNotes/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = FirstProject.playground.KeepNotes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		006A2B1729A8F13500E2B7DC /* Build configuration list for PBXProject "KeepNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				006A2B3129A8F13700E2B7DC /* Debug */,
+				006A2B3229A8F13700E2B7DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		006A2B3329A8F13700E2B7DC /* Build configuration list for PBXNativeTarget "KeepNotes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				006A2B3429A8F13700E2B7DC /* Debug */,
+				006A2B3529A8F13700E2B7DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		006A2B2829A8F13500E2B7DC /* KeepNotes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				006A2B2929A8F13500E2B7DC /* KeepNotes.xcdatamodel */,
+			);
+			currentVersion = 006A2B2929A8F13500E2B7DC /* KeepNotes.xcdatamodel */;
+			path = KeepNotes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 006A2B1429A8F13500E2B7DC /* Project object */;
+}
