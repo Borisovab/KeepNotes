@@ -32,12 +32,20 @@ class AppCoordinator: Coordinator {
     }
 
     func presentSchedule(loginName: String) {
-        let vc = ScheduleViewController.creatVC(viewController: ScheduleViewController(), title: "Welcome to your Schedule")
+        let vc = ScheduleViewController.creatVC(viewController: ScheduleViewController(), title: "\(loginName)'s Schedule")
         vc.coordinator = self
         vc.viewModel = ScheduleViewModel()
         vc.viewModel?.name = loginName
 
         navigationController.viewControllers.removeAll()
+        navigationController.pushViewController(vc, animated: true)
+    }
+
+    func presentNote() {
+        let vc = NoteViewController.creatVC(viewController: NoteViewController(), title: "Add your Note")
+        vc.coordinator = self
+        vc.viewModel = NoteViewModel()
+
         navigationController.pushViewController(vc, animated: true)
     }
 

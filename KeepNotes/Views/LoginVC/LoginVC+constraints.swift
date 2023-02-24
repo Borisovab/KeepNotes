@@ -10,7 +10,7 @@ import SnapKit
 
 extension LoginViewController {
     func setupConstraints() {
-        [loginScreen, logsStackView, enterButton].forEach{ view.addSubview( $0) }
+        [loginScreen, logsStackView, enterButton, statusLabel].forEach{ view.addSubview( $0) }
 
         loginScreen.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(150)
@@ -28,6 +28,12 @@ extension LoginViewController {
             make.top.equalTo(logsStackView.snp.bottom).offset(70)
             make.centerX.equalToSuperview()
             make.width.equalTo(200)
+            make.height.equalTo(80)
+        }
+
+        statusLabel.snp.makeConstraints { make in
+            make.top.equalTo(enterButton.snp.bottom).offset(30)
+            make.leading.trailing.equalToSuperview().inset(25)
             make.height.equalTo(80)
         }
     }
