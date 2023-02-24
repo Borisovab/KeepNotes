@@ -46,16 +46,24 @@ class LoginViewController: UIViewController, Adapter {
     var enterButton: UIButton = {
         let button = UIButton()
         button.setTitle("Enter", for: .normal)
-        button.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         return button
+    }()
+
+    var statusLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 35, weight: .bold)
+        label.textAlignment = .center
+        return label
     }()
 
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 0.6510761589)
+        view.backgroundColor = #colorLiteral(red: 0.8603735566, green: 0.9964947104, blue: 0.8555072546, alpha: 1)
         setupConstraints()
+        bindViewModel()
         enterButtonPressed()
     }
 

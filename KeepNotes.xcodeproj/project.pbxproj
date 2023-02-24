@@ -24,6 +24,12 @@
 		006A2B5529A9051200E2B7DC /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B5429A9051200E2B7DC /* ScheduleViewModel.swift */; };
 		006A2B5729A9067D00E2B7DC /* ScheduleVC+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B5629A9067D00E2B7DC /* ScheduleVC+constraints.swift */; };
 		006A2B5929A9096E00E2B7DC /* LoginVC+enterButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B5829A9096E00E2B7DC /* LoginVC+enterButtonAction.swift */; };
+		006A2B5C29A90FAA00E2B7DC /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B5B29A90FAA00E2B7DC /* ScheduleTableViewCell.swift */; };
+		006A2B5F29A9137100E2B7DC /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B5E29A9137100E2B7DC /* NoteViewController.swift */; };
+		006A2B6229A913B200E2B7DC /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B6129A913B200E2B7DC /* NoteViewModel.swift */; };
+		006A2B6429A9149700E2B7DC /* ScheduleVC+addButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B6329A9149700E2B7DC /* ScheduleVC+addButtonAction.swift */; };
+		006A2B6629A91B3900E2B7DC /* NoteVC+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B6529A91B3900E2B7DC /* NoteVC+constraints.swift */; };
+		006A2B6829A91E7000E2B7DC /* LoginVC+bind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B6729A91E7000E2B7DC /* LoginVC+bind.swift */; };
 		78BAF91519EFCC9CB05FB8C9 /* Pods_KeepNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1241DB87849059A5E60707DF /* Pods_KeepNotes.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +53,12 @@
 		006A2B5429A9051200E2B7DC /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		006A2B5629A9067D00E2B7DC /* ScheduleVC+constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScheduleVC+constraints.swift"; sourceTree = "<group>"; };
 		006A2B5829A9096E00E2B7DC /* LoginVC+enterButtonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+enterButtonAction.swift"; sourceTree = "<group>"; };
+		006A2B5B29A90FAA00E2B7DC /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		006A2B5E29A9137100E2B7DC /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		006A2B6129A913B200E2B7DC /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
+		006A2B6329A9149700E2B7DC /* ScheduleVC+addButtonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScheduleVC+addButtonAction.swift"; sourceTree = "<group>"; };
+		006A2B6529A91B3900E2B7DC /* NoteVC+constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteVC+constraints.swift"; sourceTree = "<group>"; };
+		006A2B6729A91E7000E2B7DC /* LoginVC+bind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+bind.swift"; sourceTree = "<group>"; };
 		1241DB87849059A5E60707DF /* Pods_KeepNotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepNotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC25AA76486C9A9C5E89296 /* Pods-KeepNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepNotes.release.xcconfig"; path = "Target Support Files/Pods-KeepNotes/Pods-KeepNotes.release.xcconfig"; sourceTree = "<group>"; };
 		9B4B53CE1BB7CAC4F8086195 /* Pods-KeepNotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepNotes.debug.xcconfig"; path = "Target Support Files/Pods-KeepNotes/Pods-KeepNotes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +114,7 @@
 			children = (
 				006A2B4D29A9035600E2B7DC /* LoginVC */,
 				006A2B4E29A9036000E2B7DC /* ScheduleVC */,
+				006A2B5D29A9134F00E2B7DC /* NoteVC */,
 				006A2B4A29A8FFC000E2B7DC /* Protocols */,
 				006A2B3B29A8F52300E2B7DC /* Storyboards */,
 			);
@@ -111,9 +124,10 @@
 		006A2B3729A8F4D100E2B7DC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				006A2B6029A9139800E2B7DC /* NoteViewModel */,
+				006A2B4329A8F7E100E2B7DC /* LoginViewModel */,
 				006A2B5329A904FB00E2B7DC /* ScheduleViewModel */,
 				006A2B4729A8F81E00E2B7DC /* Bindings */,
-				006A2B4329A8F7E100E2B7DC /* loginViewModel */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -160,12 +174,12 @@
 			path = User;
 			sourceTree = "<group>";
 		};
-		006A2B4329A8F7E100E2B7DC /* loginViewModel */ = {
+		006A2B4329A8F7E100E2B7DC /* LoginViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				006A2B4529A8F80200E2B7DC /* LoginViewModel.swift */,
 			);
-			path = loginViewModel;
+			path = LoginViewModel;
 			sourceTree = "<group>";
 		};
 		006A2B4729A8F81E00E2B7DC /* Bindings */ = {
@@ -190,6 +204,7 @@
 				006A2B2329A8F13500E2B7DC /* LoginViewController.swift */,
 				006A2B5129A904A900E2B7DC /* LoginVC+constraints.swift */,
 				006A2B5829A9096E00E2B7DC /* LoginVC+enterButtonAction.swift */,
+				006A2B6729A91E7000E2B7DC /* LoginVC+bind.swift */,
 			);
 			path = LoginVC;
 			sourceTree = "<group>";
@@ -197,8 +212,10 @@
 		006A2B4E29A9036000E2B7DC /* ScheduleVC */ = {
 			isa = PBXGroup;
 			children = (
+				006A2B5A29A90F8C00E2B7DC /* ScheduleCell */,
 				006A2B4F29A903B000E2B7DC /* ScheduleViewController.swift */,
 				006A2B5629A9067D00E2B7DC /* ScheduleVC+constraints.swift */,
+				006A2B6329A9149700E2B7DC /* ScheduleVC+addButtonAction.swift */,
 			);
 			path = ScheduleVC;
 			sourceTree = "<group>";
@@ -209,6 +226,31 @@
 				006A2B5429A9051200E2B7DC /* ScheduleViewModel.swift */,
 			);
 			path = ScheduleViewModel;
+			sourceTree = "<group>";
+		};
+		006A2B5A29A90F8C00E2B7DC /* ScheduleCell */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B5B29A90FAA00E2B7DC /* ScheduleTableViewCell.swift */,
+			);
+			path = ScheduleCell;
+			sourceTree = "<group>";
+		};
+		006A2B5D29A9134F00E2B7DC /* NoteVC */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B5E29A9137100E2B7DC /* NoteViewController.swift */,
+				006A2B6529A91B3900E2B7DC /* NoteVC+constraints.swift */,
+			);
+			path = NoteVC;
+			sourceTree = "<group>";
+		};
+		006A2B6029A9139800E2B7DC /* NoteViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B6129A913B200E2B7DC /* NoteViewModel.swift */,
+			);
+			path = NoteViewModel;
 			sourceTree = "<group>";
 		};
 		AADBE5A8E4B8E9FA7A667BBF /* Pods */ = {
@@ -343,6 +385,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				006A2B6429A9149700E2B7DC /* ScheduleVC+addButtonAction.swift in Sources */,
+				006A2B5C29A90FAA00E2B7DC /* ScheduleTableViewCell.swift in Sources */,
 				006A2B5229A904A900E2B7DC /* LoginVC+constraints.swift in Sources */,
 				006A2B3D29A8F5D500E2B7DC /* Coordinator.swift in Sources */,
 				006A2B4C29A8FFD200E2B7DC /* Adapter.swift in Sources */,
@@ -350,13 +394,17 @@
 				006A2B4229A8F72C00E2B7DC /* User.swift in Sources */,
 				006A2B5729A9067D00E2B7DC /* ScheduleVC+constraints.swift in Sources */,
 				006A2B3F29A8F61E00E2B7DC /* AppCoordinator.swift in Sources */,
+				006A2B5F29A9137100E2B7DC /* NoteViewController.swift in Sources */,
 				006A2B5029A903B000E2B7DC /* ScheduleViewController.swift in Sources */,
+				006A2B6829A91E7000E2B7DC /* LoginVC+bind.swift in Sources */,
 				006A2B5529A9051200E2B7DC /* ScheduleViewModel.swift in Sources */,
 				006A2B5929A9096E00E2B7DC /* LoginVC+enterButtonAction.swift in Sources */,
 				006A2B2429A8F13500E2B7DC /* LoginViewController.swift in Sources */,
 				006A2B4929A8F83200E2B7DC /* Dynamic.swift in Sources */,
 				006A2B2029A8F13500E2B7DC /* AppDelegate.swift in Sources */,
 				006A2B4629A8F80200E2B7DC /* LoginViewModel.swift in Sources */,
+				006A2B6629A91B3900E2B7DC /* NoteVC+constraints.swift in Sources */,
+				006A2B6229A913B200E2B7DC /* NoteViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

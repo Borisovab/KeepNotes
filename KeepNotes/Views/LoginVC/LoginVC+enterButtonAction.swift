@@ -19,6 +19,7 @@ extension LoginViewController {
         viewModel.userPessedLoginButton(login: (loginTF.text ?? ""), password: (passwordTF.text ?? ""))
 
         if viewModel.isLoggedIn {
+            coordinator?.isLoggedIn = viewModel.isLoggedIn
             coordinator?.presentSchedule(loginName: loginTF.text ?? "")
         }
     }
