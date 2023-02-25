@@ -32,7 +32,7 @@ class AppCoordinator: Coordinator {
     }
 
     func presentSchedule(loginName: String) {
-        let vc = ScheduleViewController.creatVC(viewController: ScheduleViewController(), title: "\(loginName)'s Schedule")
+        let vc = ScheduleViewController.creatVC(viewController: ScheduleViewController(), title: "\(loginName)'s schedule")
         vc.coordinator = self
         vc.viewModel = ScheduleViewModel()
         vc.viewModel?.name = loginName

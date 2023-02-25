@@ -40,6 +40,7 @@ extension ScheduleViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: scheduleTableViewCellReuseIdentifier, for: indexPath) as? ScheduleTableViewCell
         else { return UITableViewCell() }
 
+        cell.configureScheduleCell(noteName: "Please, add your note here")
         return cell
     }
 
