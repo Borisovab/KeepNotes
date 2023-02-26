@@ -1,36 +1,30 @@
 //
-//  AppDelegate.swift
+//  CoreDataManager.swift
 //  KeepNotes
 //
-//  Created by Александр Борисов on 24.02.2023.
+//  Created by Александр Борисов on 25.02.2023.
 //
 
-import UIKit
+import Foundation
 import CoreData
 
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class CoreDataManager {
+    static let instance = CoreDataManager()
 
-    var window: UIWindow?
-    var coordinator: AppCoordinator?
+    private init() {}
 
+    // создание контекста
+    lazy var context: NSManagedObjectContext = {
+        persistentContainer.viewContext
+    }()
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-        let navigationController = UINavigationController()
-        coordinator = AppCoordinator(navigationController: navigationController)
-        coordinator?.start()
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
-        
-
-        return true
+    // описание сущности
+    func entityForName(entityName: String) -> NSEntityDescription {
+        return NSEntityDescription.entity(forEntityName: entityName, in: context)!
     }
 
 
     // MARK: - Core Data stack
-
     lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
@@ -38,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "CoreDataTest2")
+        let container = NSPersistentContainer(name: "KeepNotes")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -58,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return container
     }()
 
+
     // MARK: - Core Data Saving support
 
     func saveContext () {
@@ -73,6 +68,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
-

@@ -8,5 +8,6 @@
 import Foundation
 
 class NoteViewModel {
-    
+
+    var myNote: Note?
 }

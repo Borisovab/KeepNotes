@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000C24B629AA32720096C82C /* NoteVC+saveButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000C24B529AA32720096C82C /* NoteVC+saveButtonAction.swift */; };
+		000C24B829ABA47D0096C82C /* NoteVC+saveNoteToDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000C24B729ABA47D0096C82C /* NoteVC+saveNoteToDB.swift */; };
+		000C24BA29ABA5210096C82C /* NoteVC+errorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000C24B929ABA5210096C82C /* NoteVC+errorAlert.swift */; };
+		000C24BC29ABA5C90096C82C /* NoteVC+showDataOnScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000C24BB29ABA5C90096C82C /* NoteVC+showDataOnScreen.swift */; };
+		000C24BE29ABA6AC0096C82C /* ScheduleVC+setFetchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000C24BD29ABA6AC0096C82C /* ScheduleVC+setFetchResult.swift */; };
 		006A2B2029A8F13500E2B7DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B1F29A8F13500E2B7DC /* AppDelegate.swift */; };
 		006A2B2429A8F13500E2B7DC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B2329A8F13500E2B7DC /* LoginViewController.swift */; };
 		006A2B2729A8F13500E2B7DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006A2B2529A8F13500E2B7DC /* Main.storyboard */; };
@@ -30,10 +35,18 @@
 		006A2B6429A9149700E2B7DC /* ScheduleVC+addButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B6329A9149700E2B7DC /* ScheduleVC+addButtonAction.swift */; };
 		006A2B6629A91B3900E2B7DC /* NoteVC+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B6529A91B3900E2B7DC /* NoteVC+constraints.swift */; };
 		006A2B6829A91E7000E2B7DC /* LoginVC+bind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B6729A91E7000E2B7DC /* LoginVC+bind.swift */; };
+		006A2B7429A9F55800E2B7DC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B7329A9F55800E2B7DC /* CoreDataManager.swift */; };
+		006A2B7729A9FFAB00E2B7DC /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B7529A9FFAB00E2B7DC /* Note+CoreDataClass.swift */; };
+		006A2B7829A9FFAB00E2B7DC /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B7629A9FFAB00E2B7DC /* Note+CoreDataProperties.swift */; };
 		78BAF91519EFCC9CB05FB8C9 /* Pods_KeepNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1241DB87849059A5E60707DF /* Pods_KeepNotes.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		000C24B529AA32720096C82C /* NoteVC+saveButtonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteVC+saveButtonAction.swift"; sourceTree = "<group>"; };
+		000C24B729ABA47D0096C82C /* NoteVC+saveNoteToDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteVC+saveNoteToDB.swift"; sourceTree = "<group>"; };
+		000C24B929ABA5210096C82C /* NoteVC+errorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteVC+errorAlert.swift"; sourceTree = "<group>"; };
+		000C24BB29ABA5C90096C82C /* NoteVC+showDataOnScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteVC+showDataOnScreen.swift"; sourceTree = "<group>"; };
+		000C24BD29ABA6AC0096C82C /* ScheduleVC+setFetchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScheduleVC+setFetchResult.swift"; sourceTree = "<group>"; };
 		006A2B1C29A8F13500E2B7DC /* KeepNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		006A2B1F29A8F13500E2B7DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		006A2B2329A8F13500E2B7DC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +72,9 @@
 		006A2B6329A9149700E2B7DC /* ScheduleVC+addButtonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScheduleVC+addButtonAction.swift"; sourceTree = "<group>"; };
 		006A2B6529A91B3900E2B7DC /* NoteVC+constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteVC+constraints.swift"; sourceTree = "<group>"; };
 		006A2B6729A91E7000E2B7DC /* LoginVC+bind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+bind.swift"; sourceTree = "<group>"; };
+		006A2B7329A9F55800E2B7DC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		006A2B7529A9FFAB00E2B7DC /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		006A2B7629A9FFAB00E2B7DC /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1241DB87849059A5E60707DF /* Pods_KeepNotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepNotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC25AA76486C9A9C5E89296 /* Pods-KeepNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepNotes.release.xcconfig"; path = "Target Support Files/Pods-KeepNotes/Pods-KeepNotes.release.xcconfig"; sourceTree = "<group>"; };
 		9B4B53CE1BB7CAC4F8086195 /* Pods-KeepNotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepNotes.debug.xcconfig"; path = "Target Support Files/Pods-KeepNotes/Pods-KeepNotes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,10 +117,8 @@
 				006A2B3829A8F4EF00E2B7DC /* Coordinators */,
 				006A2B3729A8F4D100E2B7DC /* ViewModels */,
 				006A2B3629A8F4CA00E2B7DC /* Views */,
-				006A2B1F29A8F13500E2B7DC /* AppDelegate.swift */,
-				006A2B2B29A8F13700E2B7DC /* Assets.xcassets */,
+				006A2B7929AA0B0B00E2B7DC /* SupportingFiles */,
 				006A2B3029A8F13700E2B7DC /* Info.plist */,
-				006A2B2829A8F13500E2B7DC /* KeepNotes.xcdatamodeld */,
 			);
 			path = KeepNotes;
 			sourceTree = "<group>";
@@ -124,10 +138,10 @@
 		006A2B3729A8F4D100E2B7DC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				006A2B6029A9139800E2B7DC /* NoteViewModel */,
+				006A2B4729A8F81E00E2B7DC /* Bindings */,
 				006A2B4329A8F7E100E2B7DC /* LoginViewModel */,
 				006A2B5329A904FB00E2B7DC /* ScheduleViewModel */,
-				006A2B4729A8F81E00E2B7DC /* Bindings */,
+				006A2B6029A9139800E2B7DC /* NoteViewModel */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -152,6 +166,8 @@
 		006A2B3A29A8F51700E2B7DC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				006A2B7229A9F53E00E2B7DC /* CoreDataManager */,
+				006A2B6929A9F26E00E2B7DC /* Entity */,
 				006A2B4029A8F72000E2B7DC /* User */,
 			);
 			path = Models;
@@ -216,6 +232,7 @@
 				006A2B4F29A903B000E2B7DC /* ScheduleViewController.swift */,
 				006A2B5629A9067D00E2B7DC /* ScheduleVC+constraints.swift */,
 				006A2B6329A9149700E2B7DC /* ScheduleVC+addButtonAction.swift */,
+				000C24BD29ABA6AC0096C82C /* ScheduleVC+setFetchResult.swift */,
 			);
 			path = ScheduleVC;
 			sourceTree = "<group>";
@@ -241,6 +258,10 @@
 			children = (
 				006A2B5E29A9137100E2B7DC /* NoteViewController.swift */,
 				006A2B6529A91B3900E2B7DC /* NoteVC+constraints.swift */,
+				000C24B529AA32720096C82C /* NoteVC+saveButtonAction.swift */,
+				000C24B729ABA47D0096C82C /* NoteVC+saveNoteToDB.swift */,
+				000C24B929ABA5210096C82C /* NoteVC+errorAlert.swift */,
+				000C24BB29ABA5C90096C82C /* NoteVC+showDataOnScreen.swift */,
 			);
 			path = NoteVC;
 			sourceTree = "<group>";
@@ -251,6 +272,33 @@
 				006A2B6129A913B200E2B7DC /* NoteViewModel.swift */,
 			);
 			path = NoteViewModel;
+			sourceTree = "<group>";
+		};
+		006A2B6929A9F26E00E2B7DC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B7529A9FFAB00E2B7DC /* Note+CoreDataClass.swift */,
+				006A2B7629A9FFAB00E2B7DC /* Note+CoreDataProperties.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		006A2B7229A9F53E00E2B7DC /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B7329A9F55800E2B7DC /* CoreDataManager.swift */,
+				006A2B2829A8F13500E2B7DC /* KeepNotes.xcdatamodeld */,
+			);
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+		006A2B7929AA0B0B00E2B7DC /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				006A2B1F29A8F13500E2B7DC /* AppDelegate.swift */,
+				006A2B2B29A8F13700E2B7DC /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		AADBE5A8E4B8E9FA7A667BBF /* Pods */ = {
@@ -387,22 +435,30 @@
 			files = (
 				006A2B6429A9149700E2B7DC /* ScheduleVC+addButtonAction.swift in Sources */,
 				006A2B5C29A90FAA00E2B7DC /* ScheduleTableViewCell.swift in Sources */,
+				000C24B829ABA47D0096C82C /* NoteVC+saveNoteToDB.swift in Sources */,
 				006A2B5229A904A900E2B7DC /* LoginVC+constraints.swift in Sources */,
+				000C24B629AA32720096C82C /* NoteVC+saveButtonAction.swift in Sources */,
 				006A2B3D29A8F5D500E2B7DC /* Coordinator.swift in Sources */,
 				006A2B4C29A8FFD200E2B7DC /* Adapter.swift in Sources */,
 				006A2B2A29A8F13500E2B7DC /* KeepNotes.xcdatamodeld in Sources */,
 				006A2B4229A8F72C00E2B7DC /* User.swift in Sources */,
 				006A2B5729A9067D00E2B7DC /* ScheduleVC+constraints.swift in Sources */,
+				006A2B7429A9F55800E2B7DC /* CoreDataManager.swift in Sources */,
 				006A2B3F29A8F61E00E2B7DC /* AppCoordinator.swift in Sources */,
+				000C24BC29ABA5C90096C82C /* NoteVC+showDataOnScreen.swift in Sources */,
 				006A2B5F29A9137100E2B7DC /* NoteViewController.swift in Sources */,
 				006A2B5029A903B000E2B7DC /* ScheduleViewController.swift in Sources */,
 				006A2B6829A91E7000E2B7DC /* LoginVC+bind.swift in Sources */,
+				000C24BE29ABA6AC0096C82C /* ScheduleVC+setFetchResult.swift in Sources */,
+				006A2B7729A9FFAB00E2B7DC /* Note+CoreDataClass.swift in Sources */,
 				006A2B5529A9051200E2B7DC /* ScheduleViewModel.swift in Sources */,
 				006A2B5929A9096E00E2B7DC /* LoginVC+enterButtonAction.swift in Sources */,
 				006A2B2429A8F13500E2B7DC /* LoginViewController.swift in Sources */,
 				006A2B4929A8F83200E2B7DC /* Dynamic.swift in Sources */,
+				000C24BA29ABA5210096C82C /* NoteVC+errorAlert.swift in Sources */,
 				006A2B2029A8F13500E2B7DC /* AppDelegate.swift in Sources */,
 				006A2B4629A8F80200E2B7DC /* LoginViewModel.swift in Sources */,
+				006A2B7829A9FFAB00E2B7DC /* Note+CoreDataProperties.swift in Sources */,
 				006A2B6629A91B3900E2B7DC /* NoteVC+constraints.swift in Sources */,
 				006A2B6229A913B200E2B7DC /* NoteViewModel.swift in Sources */,
 			);
