@@ -10,6 +10,8 @@ import SnapKit
 
 class ScheduleTableViewCell: UITableViewCell {
 
+    var viewModel: ScheduleViewModel?
+
     var noteNameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
@@ -22,7 +24,6 @@ class ScheduleTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
 
     override func prepareForReuse() {
@@ -39,11 +40,10 @@ class ScheduleTableViewCell: UITableViewCell {
             make.bottom.equalToSuperview().offset(-5)
         }
     }
-
-    func configureScheduleCell(noteName: String) {
+    
+    func configureScheduleCell(index: IndexPath, note: Note) {
         setupConstraints()
-
-        self.noteNameLabel.text = noteName
+        noteNameLabel.text = note.noteHeader
     }
 
 }

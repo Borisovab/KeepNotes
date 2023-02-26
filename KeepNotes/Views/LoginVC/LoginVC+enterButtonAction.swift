@@ -20,7 +20,7 @@ extension LoginViewController {
 
         if viewModel.isLoggedIn {
             coordinator?.isLoggedIn = viewModel.isLoggedIn
-            coordinator?.presentSchedule(loginName: loginTF.text ?? "")
+            coordinator?.presentSchedule()
         }
     }
 }

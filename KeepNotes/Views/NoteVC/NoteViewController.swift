@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NoteViewController: UIViewController, Adapter {
 
@@ -14,7 +15,7 @@ class NoteViewController: UIViewController, Adapter {
 
     var noteHeaderTF: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Enter your header here"
+        textField.placeholder = "Enter a name for your note (required):"
         return textField
     }()
 
@@ -34,10 +35,12 @@ class NoteViewController: UIViewController, Adapter {
         return button
     }()
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.8603735566, green: 0.9964947104, blue: 0.8555072546, alpha: 1)
         setupConstraints()
+        seveButtonPressed()
+        readObject()
     }
-
 }

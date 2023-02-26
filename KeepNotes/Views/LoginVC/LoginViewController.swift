@@ -67,6 +67,5 @@ class LoginViewController: UIViewController, Adapter {
         enterButtonPressed()
     }
 
-
 }
 

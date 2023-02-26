@@ -17,12 +17,13 @@ class AppCoordinator: Coordinator {
 
     func start() {
         if isLoggedIn {
-            presentSchedule(loginName: User.keys.first?.login ?? "")
+            presentSchedule()
         } else {
             presentLogin()
         }
     }
 
+    //MARK: - загрузка LoginViewController
     func presentLogin() {
         let vc = LoginViewController.creatVC(viewController: LoginViewController(), title: "Hello!")
         vc.coordinator = self
@@ -31,16 +32,17 @@ class AppCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
 
-    func presentSchedule(loginName: String) {
-        let vc = ScheduleViewController.creatVC(viewController: ScheduleViewController(), title: "\(loginName)'s schedule")
+    //MARK: - загрузка ScheduleViewController
+    func presentSchedule() {
+        let vc = ScheduleViewController.creatVC(viewController: ScheduleViewController(), title: "Schedule")
         vc.coordinator = self
         vc.viewModel = ScheduleViewModel()
-        vc.viewModel?.name = loginName
 
         navigationController.viewControllers.removeAll()
         navigationController.pushViewController(vc, animated: true)
     }
 
+    //MARK: - загрузка NoteViewController (для создания новой заметки)
     func presentNote() {
         let vc = NoteViewController.creatVC(viewController: NoteViewController(), title: "Add your Note")
         vc.coordinator = self
@@ -49,5 +51,13 @@ class AppCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
 
+    //MARK: - загрузка NoteViewController (для редактирования существующей заметки)
+    func showNoteToCorrectIt(note: Note) {
+        let vc = NoteViewController.creatVC(viewController: NoteViewController(), title: "Correct your note")
+        vc.coordinator = self
+        vc.viewModel = NoteViewModel()
+        vc.viewModel?.myNote = note
 
+        navigationController.pushViewController(vc, animated: true)
+    }
 }
