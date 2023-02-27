@@ -38,6 +38,7 @@
 		006A2B7429A9F55800E2B7DC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B7329A9F55800E2B7DC /* CoreDataManager.swift */; };
 		006A2B7729A9FFAB00E2B7DC /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B7529A9FFAB00E2B7DC /* Note+CoreDataClass.swift */; };
 		006A2B7829A9FFAB00E2B7DC /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B7629A9FFAB00E2B7DC /* Note+CoreDataProperties.swift */; };
+		00C92B7829ACE69B0090054D /* NoteVC+fontButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C92B7729ACE69B0090054D /* NoteVC+fontButtonAction.swift */; };
 		78BAF91519EFCC9CB05FB8C9 /* Pods_KeepNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1241DB87849059A5E60707DF /* Pods_KeepNotes.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		006A2B7329A9F55800E2B7DC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		006A2B7529A9FFAB00E2B7DC /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		006A2B7629A9FFAB00E2B7DC /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		00C92B7729ACE69B0090054D /* NoteVC+fontButtonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteVC+fontButtonAction.swift"; sourceTree = "<group>"; };
 		1241DB87849059A5E60707DF /* Pods_KeepNotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepNotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EC25AA76486C9A9C5E89296 /* Pods-KeepNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepNotes.release.xcconfig"; path = "Target Support Files/Pods-KeepNotes/Pods-KeepNotes.release.xcconfig"; sourceTree = "<group>"; };
 		9B4B53CE1BB7CAC4F8086195 /* Pods-KeepNotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepNotes.debug.xcconfig"; path = "Target Support Files/Pods-KeepNotes/Pods-KeepNotes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				000C24B729ABA47D0096C82C /* NoteVC+saveNoteToDB.swift */,
 				000C24B929ABA5210096C82C /* NoteVC+errorAlert.swift */,
 				000C24BB29ABA5C90096C82C /* NoteVC+showDataOnScreen.swift */,
+				00C92B7729ACE69B0090054D /* NoteVC+fontButtonAction.swift */,
 			);
 			path = NoteVC;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				006A2B7729A9FFAB00E2B7DC /* Note+CoreDataClass.swift in Sources */,
 				006A2B5529A9051200E2B7DC /* ScheduleViewModel.swift in Sources */,
 				006A2B5929A9096E00E2B7DC /* LoginVC+enterButtonAction.swift in Sources */,
+				00C92B7829ACE69B0090054D /* NoteVC+fontButtonAction.swift in Sources */,
 				006A2B2429A8F13500E2B7DC /* LoginViewController.swift in Sources */,
 				006A2B4929A8F83200E2B7DC /* Dynamic.swift in Sources */,
 				000C24BA29ABA5210096C82C /* NoteVC+errorAlert.swift in Sources */,

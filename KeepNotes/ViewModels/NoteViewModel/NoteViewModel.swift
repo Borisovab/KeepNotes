@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 class NoteViewModel {
 
     var myNote: Note?
+    var size: Int?
+    var descriptor: UIFontDescriptor?
 }
