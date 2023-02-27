@@ -15,6 +15,7 @@ class LoginViewController: UIViewController, Adapter {
     var loginScreen: UILabel = {
         let label = UILabel()
         label.text = "Login Screen"
+        label.textColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         label.font = UIFont.systemFont(ofSize: 35, weight: .bold)
         label.textAlignment = .center
         return label
@@ -45,8 +46,12 @@ class LoginViewController: UIViewController, Adapter {
 
     var enterButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Enter", for: .normal)
-        button.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+        button.setTitle("Log In", for: .normal)
+        button.backgroundColor = #colorLiteral(red: 0.6917473674, green: 0.8152458668, blue: 0.7281364799, alpha: 1)
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.layer.cornerRadius = 20
+        button.layer.borderWidth = 3
+        button.layer.borderColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1).withAlphaComponent(0.7).cgColor
         return button
     }()
 

@@ -10,10 +10,17 @@ import SnapKit
 
 extension NoteViewController {
     func setupConstraints() {
-        [noteHeaderTF, noteTextView, seveButton].forEach{ view.addSubview( $0) }
+        [fontStackView, noteHeaderTF, noteTextView, seveButton].forEach{ view.addSubview( $0) }
+
+        fontStackView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(120)
+            make.leading.trailing.equalToSuperview().inset(25)
+            make.width.equalTo(150)
+            make.height.equalTo(40)
+        }
 
         noteHeaderTF.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(100)
+            make.top.equalToSuperview().offset(180)
             make.leading.trailing.equalToSuperview().inset(25)
             make.height.equalTo(40)
         }
@@ -21,11 +28,11 @@ extension NoteViewController {
         noteTextView.snp.makeConstraints { make in
             make.top.equalTo(noteHeaderTF.snp.bottom).offset(30)
             make.leading.trailing.equalToSuperview().inset(25)
-            make.height.equalTo(500)
+            make.height.equalTo(450)
         }
 
         seveButton.snp.makeConstraints { make in
-            make.top.equalTo(noteTextView.snp.bottom).offset(70)
+            make.top.equalTo(noteTextView.snp.bottom).offset(50)
             make.centerX.equalToSuperview()
             make.width.equalTo(200)
             make.height.equalTo(60)
