@@ -21,4 +21,24 @@ class NoteViewModel {
 
     var fonts = ["bold", "noBold"]
 
+
+    func changeTextConfigure(strStateArray: [String], _ textView: UITextView, _ descriptor: UIFontDescriptor?, _ size: Int?, _ state: String?) {
+
+        if descriptor != nil {
+            textView.font = UIFont(descriptor: descriptor!, size: CGFloat(size ?? 14))
+            if state == strStateArray.first {
+                textView.font = textView.font?.bold()
+            } else if state == strStateArray.last {
+                textView.font = textView.font?.noBold()
+            }
+        } else {
+            textView.font = UIFont(name: "Arial", size: CGFloat(size ?? 14))
+            if state == strStateArray.first {
+                textView.font = textView.font?.bold()
+            } else if state == strStateArray.last {
+                textView.font = textView.font?.noBold()
+            }
+        }
+    }
+
 }

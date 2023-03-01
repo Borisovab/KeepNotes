@@ -9,25 +9,15 @@ import UIKit
 
 extension NoteViewController {
     func setTextSize() {
-        let size = viewModel?.size
-        let descriptor = viewModel?.descriptor
-        let state = viewModel?.state
+        guard let viewModel = viewModel
+        else { return }
 
-        if descriptor != nil {
-            noteTextView.font = UIFont(descriptor: descriptor!, size: CGFloat(size ?? 14))
-            if state == viewModel?.fonts[0] {
-                self.noteTextView.font = self.noteTextView.font?.bold()
-            } else if state == viewModel?.fonts[1] {
-                self.noteTextView.font = self.noteTextView.font?.noBold()
-            }
-        } else {
-            noteTextView.font = UIFont(name: "Arial", size: CGFloat(size ?? 14))
-            if state == viewModel?.fonts[0] {
-                self.noteTextView.font = self.noteTextView.font?.bold()
-            } else if state == viewModel?.fonts[1] {
-                self.noteTextView.font = self.noteTextView.font?.noBold()
-            }
-        }
+        let array = viewModel.fonts
+        let size = viewModel.size
+        let descriptor = viewModel.descriptor
+        let state = viewModel.state
+
+        viewModel.changeTextConfigure(strStateArray: array, noteTextView, descriptor, size, state)
 
         sizeTF.text = String(size ?? 14)
         italicsTF.text = state
