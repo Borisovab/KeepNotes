@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import SnapKit
 
 class NoteViewController: UIViewController, Adapter {
 
@@ -24,20 +25,19 @@ class NoteViewController: UIViewController, Adapter {
         return button
     }()
 
-    var italicsButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Italics", for: .normal)
-        button.backgroundColor = #colorLiteral(red: 0.6917473674, green: 0.8152458668, blue: 0.7281364799, alpha: 1)
-        button.setTitleColor(UIColor.black, for: .normal)
-        button.layer.cornerRadius = 20
-        button.layer.borderWidth = 3
-        button.layer.borderColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1).withAlphaComponent(0.7).cgColor
-        return button
+    var italicsTF: UITextField = {
+        let textField = UITextField()
+        textField.textAlignment = .center
+        textField.text = "bold"
+        textField.backgroundColor = #colorLiteral(red: 0.6917473674, green: 0.8152458668, blue: 0.7281364799, alpha: 1)
+        textField.layer.cornerRadius = 20
+        textField.layer.borderWidth = 3
+        textField.layer.borderColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1).withAlphaComponent(0.7).cgColor
+        return textField
     }()
 
     var sizeTF: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Size: "
         textField.textAlignment = .center
         textField.text = "14"
         textField.backgroundColor = #colorLiteral(red: 0.6917473674, green: 0.8152458668, blue: 0.7281364799, alpha: 1)
@@ -52,6 +52,11 @@ class NoteViewController: UIViewController, Adapter {
         return picker
     }()
 
+    var italicsPicker: UIPickerView = {
+        let picker = UIPickerView()
+        return picker
+    }()
+
     lazy var fontStackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .horizontal
@@ -59,7 +64,7 @@ class NoteViewController: UIViewController, Adapter {
         stack.alignment = .fill
         stack.distribution = .fillEqually
 
-        [fontButton, italicsButton, sizeTF].forEach{ stack.addArrangedSubview($0) }
+        [fontButton, italicsTF, sizeTF].forEach{ stack.addArrangedSubview($0) }
         return stack
     }()
 
@@ -96,50 +101,12 @@ class NoteViewController: UIViewController, Adapter {
         setupConstraints()
         seveButtonPressed()
         readObject()
-        setTextSize()
         fontButtonPressed()
 
         createToolBarForPicker()
         pickerToTextField()
         addPickerDelegateAndDataSours()
     }
-
-    func pickerToTextField() {
-        sizeTF.inputView = sizePicker
-    }
-
-    func addPickerDelegateAndDataSours() {
-        sizePicker.dataSource = self
-        sizePicker.delegate = self
-    }
-
-    func createToolBarForPicker() {
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneButtonAction))
-
-        toolbar.setItems([doneButton], animated: true)
-        sizeTF.inputAccessoryView = toolbar
-    }
-
-    @objc func doneButtonAction() {
-        view.endEditing(true)
-    }
-
-    func setTextSize() {
-        let size = viewModel?.size
-
-        let descriptor = viewModel?.descriptor
-        guard let descriptor = descriptor
-        else { return }
-
-        sizeTF.text = String(size ?? 14)
-        noteTextView.font = UIFont(descriptor: descriptor, size: CGFloat(size ?? 14))
-        noteTextView.reloadInputViews()
-    }
-
-
 }
 
 
@@ -156,8 +123,7 @@ extension NoteViewController: UIFontPickerViewControllerDelegate {
         else { return }
         viewModel?.descriptor = descriptor
 
-        let size = viewModel?.size
-        noteTextView.font = UIFont(descriptor: descriptor, size: CGFloat(size ?? 14))
+        setTextSize()
     }
 }
 
@@ -169,19 +135,88 @@ extension NoteViewController: UIPickerViewDataSource {
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 30
+
+        switch pickerView.tag {
+        case 0:
+            return viewModel?.fonts.count ?? 1
+        case 1:
+            return 25
+        default:
+            return 1
+        }
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return String(row)
+
+        switch pickerView.tag {
+        case 0:
+            return viewModel?.fonts[row]
+        case 1:
+            return String(row)
+        default:
+            return ""
+        }
+
     }
 }
 
 //MARK: - UIPickerViewDelegate
 extension NoteViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        sizeTF.text = String(row)
-        viewModel?.size = row
-        setTextSize()
+
+        switch pickerView.tag {
+        case 0:
+            viewModel?.state = viewModel?.fonts[row]
+            setTextSize()
+
+        case 1:
+            viewModel?.size = row
+            setTextSize()
+        default:
+            break
+        }
     }
 }
+
+extension UIFont {
+
+    func withTraits(_ traits:UIFontDescriptor.SymbolicTraits...) -> UIFont {
+        let descriptor = self.fontDescriptor
+            .withSymbolicTraits(UIFontDescriptor.SymbolicTraits(traits).union(self.fontDescriptor.symbolicTraits))
+
+        if descriptor != nil {
+            return UIFont(descriptor: descriptor!, size: 0)
+        } else {
+            return noBold()
+        }
+
+
+    }
+    func withoutTraits(_ traits:UIFontDescriptor.SymbolicTraits...) -> UIFont {
+        let descriptor = self.fontDescriptor
+            .withSymbolicTraits(self.fontDescriptor.symbolicTraits.subtracting(UIFontDescriptor.SymbolicTraits(traits)))
+
+        return UIFont(descriptor: descriptor!, size: 0)
+
+    }
+
+    func bold() -> UIFont {
+        return withTraits( .traitBold)
+    }
+
+    func italic() -> UIFont {
+        return withTraits(.traitItalic)
+    }
+
+    func noItalic() -> UIFont {
+        return withoutTraits(.traitItalic)
+    }
+    func noBold() -> UIFont {
+        return withoutTraits(.traitBold)
+    }
+}
+
+
+
+
+
