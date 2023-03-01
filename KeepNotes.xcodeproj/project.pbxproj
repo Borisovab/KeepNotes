@@ -12,6 +12,8 @@
 		000C24BA29ABA5210096C82C /* NoteVC+errorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000C24B929ABA5210096C82C /* NoteVC+errorAlert.swift */; };
 		000C24BC29ABA5C90096C82C /* NoteVC+showDataOnScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000C24BB29ABA5C90096C82C /* NoteVC+showDataOnScreen.swift */; };
 		000C24BE29ABA6AC0096C82C /* ScheduleVC+setFetchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000C24BD29ABA6AC0096C82C /* ScheduleVC+setFetchResult.swift */; };
+		004C8D6C29AE453D00B65B22 /* NoteVC+configurePickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C8D6B29AE453D00B65B22 /* NoteVC+configurePickers.swift */; };
+		004C8D6E29AE45D600B65B22 /* NoteVC+setTextSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C8D6D29AE45D600B65B22 /* NoteVC+setTextSize.swift */; };
 		006A2B2029A8F13500E2B7DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B1F29A8F13500E2B7DC /* AppDelegate.swift */; };
 		006A2B2429A8F13500E2B7DC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B2329A8F13500E2B7DC /* LoginViewController.swift */; };
 		006A2B2729A8F13500E2B7DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006A2B2529A8F13500E2B7DC /* Main.storyboard */; };
@@ -48,6 +50,8 @@
 		000C24B929ABA5210096C82C /* NoteVC+errorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteVC+errorAlert.swift"; sourceTree = "<group>"; };
 		000C24BB29ABA5C90096C82C /* NoteVC+showDataOnScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteVC+showDataOnScreen.swift"; sourceTree = "<group>"; };
 		000C24BD29ABA6AC0096C82C /* ScheduleVC+setFetchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScheduleVC+setFetchResult.swift"; sourceTree = "<group>"; };
+		004C8D6B29AE453D00B65B22 /* NoteVC+configurePickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteVC+configurePickers.swift"; sourceTree = "<group>"; };
+		004C8D6D29AE45D600B65B22 /* NoteVC+setTextSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteVC+setTextSize.swift"; sourceTree = "<group>"; };
 		006A2B1C29A8F13500E2B7DC /* KeepNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		006A2B1F29A8F13500E2B7DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		006A2B2329A8F13500E2B7DC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -265,6 +269,8 @@
 				000C24B929ABA5210096C82C /* NoteVC+errorAlert.swift */,
 				000C24BB29ABA5C90096C82C /* NoteVC+showDataOnScreen.swift */,
 				00C92B7729ACE69B0090054D /* NoteVC+fontButtonAction.swift */,
+				004C8D6B29AE453D00B65B22 /* NoteVC+configurePickers.swift */,
+				004C8D6D29AE45D600B65B22 /* NoteVC+setTextSize.swift */,
 			);
 			path = NoteVC;
 			sourceTree = "<group>";
@@ -458,7 +464,9 @@
 				006A2B5929A9096E00E2B7DC /* LoginVC+enterButtonAction.swift in Sources */,
 				00C92B7829ACE69B0090054D /* NoteVC+fontButtonAction.swift in Sources */,
 				006A2B2429A8F13500E2B7DC /* LoginViewController.swift in Sources */,
+				004C8D6E29AE45D600B65B22 /* NoteVC+setTextSize.swift in Sources */,
 				006A2B4929A8F83200E2B7DC /* Dynamic.swift in Sources */,
+				004C8D6C29AE453D00B65B22 /* NoteVC+configurePickers.swift in Sources */,
 				000C24BA29ABA5210096C82C /* NoteVC+errorAlert.swift in Sources */,
 				006A2B2029A8F13500E2B7DC /* AppDelegate.swift in Sources */,
 				006A2B4629A8F80200E2B7DC /* LoginViewModel.swift in Sources */,
