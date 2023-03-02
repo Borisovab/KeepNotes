@@ -12,15 +12,23 @@ extension NoteViewController {
         guard let viewModel = viewModel
         else { return }
 
-        let array = viewModel.fonts
-        let size = viewModel.size
-        let descriptor = viewModel.descriptor
-        let state = viewModel.state
+        let size = viewModel.noteState?.size
+        let isBold = viewModel.noteState?.strState
+        
+//        let array = viewModel.fonts
+//        let size = viewModel.size
+//        let descriptor = viewModel.descriptor
+//        let state = viewModel.state
+//
+//        viewModel.changeTextConfigure(boldState: array, noteTextView, descriptor, size, state)
 
-        viewModel.changeTextConfigure(strStateArray: array, noteTextView, descriptor, size, state)
+//        viewModel.changeTextConfigure(noteTextView)
+
+
+        viewModel.textOptions(noteTextView, viewModel.noteState)
 
         sizeTF.text = String(size ?? 14)
-        italicsTF.text = state
+        isBoldTF.text = isBold
 
         noteTextView.reloadInputViews()
     }

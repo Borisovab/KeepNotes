@@ -25,7 +25,7 @@ class NoteViewController: UIViewController, Adapter {
         return button
     }()
 
-    var italicsTF: UITextField = {
+    var isBoldTF: UITextField = {
         let textField = UITextField()
         textField.textAlignment = .center
         textField.text = "bold"
@@ -64,7 +64,7 @@ class NoteViewController: UIViewController, Adapter {
         stack.alignment = .fill
         stack.distribution = .fillEqually
 
-        [fontButton, italicsTF, sizeTF].forEach{ stack.addArrangedSubview($0) }
+        [fontButton, isBoldTF, sizeTF].forEach{ stack.addArrangedSubview($0) }
         return stack
     }()
 
@@ -98,6 +98,9 @@ class NoteViewController: UIViewController, Adapter {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.8603735566, green: 0.9964947104, blue: 0.8555072546, alpha: 1)
+
+        viewModel?.noteState = NoteModel()
+
         setupConstraints()
         seveButtonPressed()
         readObject()
@@ -119,9 +122,14 @@ extension NoteViewController: UIFontPickerViewControllerDelegate {
     func fontPickerViewControllerDidPickFont(_ viewController: UIFontPickerViewController) {
         viewController.dismiss(animated: true)
 
+        guard let strDescriptor = viewController.selectedFontDescriptor?.postscriptName
+        else { return }
+
         guard let descriptor = viewController.selectedFontDescriptor
         else { return }
-        viewModel?.descriptor = descriptor
+
+        viewModel?.noteState?.descriptor = descriptor
+        viewModel?.noteState?.nameStyle = strDescriptor
 
         setTextSize()
     }
@@ -138,7 +146,7 @@ extension NoteViewController: UIPickerViewDataSource {
 
         switch pickerView.tag {
         case 0:
-            return viewModel?.fonts.count ?? 1
+            return viewModel?.noteState?.state.count ?? 0
         case 1:
             return 25
         default:
@@ -150,7 +158,7 @@ extension NoteViewController: UIPickerViewDataSource {
 
         switch pickerView.tag {
         case 0:
-            return viewModel?.fonts[row]
+            return viewModel?.noteState?.state[row]
         case 1:
             return String(row)
         default:
@@ -166,15 +174,16 @@ extension NoteViewController: UIPickerViewDelegate {
 
         switch pickerView.tag {
         case 0:
-            viewModel?.state = viewModel?.fonts[row]
+            viewModel?.noteState?.strState = viewModel?.noteState?.state[row]
             setTextSize()
 
         case 1:
-            viewModel?.size = row
+            viewModel?.noteState?.size = row
             setTextSize()
         default:
             break
         }
+
     }
 }
 

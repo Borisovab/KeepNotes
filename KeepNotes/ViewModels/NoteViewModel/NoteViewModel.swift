@@ -10,17 +10,14 @@ import UIKit
 
 class NoteViewModel {
 
-    var newFont = Dynamic(UIFont.systemFont(ofSize: 14))
-
     var myNote: Note?
-    var size: Int?
-    var nameFont: String?
-    var state: String?
-    var descriptor: UIFontDescriptor?
-    var font: UIFont?
+    var noteState: NoteModel?
+    //    var size: Int?
+    //    var state: String?
+    //    var descriptor: UIFontDescriptor?
 
-    var fonts = ["bold", "noBold"]
 
+    //    var fonts = ["bold", "noBold"]
 
     func changeTextConfigure(strStateArray: [String], _ textView: UITextView, _ descriptor: UIFontDescriptor?, _ size: Int?, _ state: String?) {
 
@@ -41,4 +38,45 @@ class NoteViewModel {
         }
     }
 
+
+
+
+
+    // new
+    func textOptions(_ textView: UITextView, _ note: NoteModel?) {
+        guard let note = note else {
+            return
+        }
+
+
+        if note.descriptor != nil {
+            textView.font = UIFont(descriptor: note.descriptor!, size: CGFloat(note.size ?? 14))
+            if note.strState == note.state.first {
+                textView.font = textView.font?.bold()
+            } else if note.strState == note.state.last {
+                textView.font = textView.font?.noBold()
+            }
+        } else {
+            textView.font = UIFont(name: "Arial", size: CGFloat(note.size ?? 14))
+            if note.strState == note.state.first {
+                textView.font = textView.font?.bold()
+            } else if note.strState == note.state.last {
+                textView.font = textView.font?.noBold()
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
+
