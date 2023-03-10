@@ -10,22 +10,29 @@ import UIKit
 extension UIFont {
 
     func withTraits(_ traits:UIFontDescriptor.SymbolicTraits...) -> UIFont {
-        let descriptor = self.fontDescriptor
-            .withSymbolicTraits(UIFontDescriptor.SymbolicTraits(traits).union(self.fontDescriptor.symbolicTraits))
+        let name = Singleton.shared.strStyleName
 
-        if descriptor != nil {
-            return UIFont(descriptor: descriptor!, size: 0)
+        let strDescriptor = self.fontDescriptor
+            .withSymbolicTraits(UIFontDescriptor.SymbolicTraits(traits).union(self.fontDescriptor.symbolicTraits))?.postscriptName
+
+        if strDescriptor != nil {
+//            print("strDescriptor from UIFont Bold ========> \(strDescriptor)")
+            Singleton.shared.strStyleName = strDescriptor!
+            return UIFont(name: strDescriptor!, size: 14)!
+
         } else {
-            return noBold()
+//            print("strDescriptor from UIFont if Bold not successed ========> \(strDescriptor)")
+            return UIFont(name: name, size: 14)!
         }
     }
 
 
     func withoutTraits(_ traits:UIFontDescriptor.SymbolicTraits...) -> UIFont {
-        let descriptor = self.fontDescriptor
-            .withSymbolicTraits(self.fontDescriptor.symbolicTraits.subtracting(UIFontDescriptor.SymbolicTraits(traits)))
-
-        return UIFont(descriptor: descriptor!, size: 0)
+        let strDescriptor = self.fontDescriptor
+            .withSymbolicTraits(self.fontDescriptor.symbolicTraits.subtracting(UIFontDescriptor.SymbolicTraits(traits)))?.postscriptName
+//        print("strDescriptor from UIFont noBold ========> \(strDescriptor)")
+        return UIFont(name: strDescriptor!, size: 0)!
+//        return UIFont(descriptor: descriptor!, size: 14)
     }
 
 

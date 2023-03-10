@@ -10,18 +10,11 @@ import UIKit
 extension NoteViewController {
     func pickerToTextField() {
         sizeTF.inputView = sizePicker
-        isBoldTF.inputView = italicsPicker
     }
 
     func addPickerDelegateAndDataSours() {
         sizePicker.dataSource = self
         sizePicker.delegate = self
-        
-        italicsPicker.dataSource = self
-        italicsPicker.delegate = self
-
-        italicsPicker.tag = 0
-        sizePicker.tag = 1
     }
 
     func createToolBarForPicker() {
@@ -32,7 +25,6 @@ extension NoteViewController {
 
         toolbar.setItems([doneButton], animated: true)
         sizeTF.inputAccessoryView = toolbar
-        isBoldTF.inputAccessoryView = toolbar
     }
 
     @objc func doneButtonAction() {

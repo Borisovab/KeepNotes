@@ -16,6 +16,8 @@
 		004C8D6E29AE45D600B65B22 /* NoteVC+setTextSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C8D6D29AE45D600B65B22 /* NoteVC+setTextSize.swift */; };
 		004C8D9A29AFABE000B65B22 /* UIFont+ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C8D9929AFABE000B65B22 /* UIFont+ex.swift */; };
 		004C8D9D29B085FD00B65B22 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C8D9C29B085FD00B65B22 /* NoteModel.swift */; };
+		004C8DA629B217F500B65B22 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C8DA529B217F500B65B22 /* Singleton.swift */; };
+		004C8DA829B21B6400B65B22 /* NoteVC+textAdjusterTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C8DA729B21B6400B65B22 /* NoteVC+textAdjusterTools.swift */; };
 		006A2B2029A8F13500E2B7DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B1F29A8F13500E2B7DC /* AppDelegate.swift */; };
 		006A2B2429A8F13500E2B7DC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A2B2329A8F13500E2B7DC /* LoginViewController.swift */; };
 		006A2B2729A8F13500E2B7DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 006A2B2529A8F13500E2B7DC /* Main.storyboard */; };
@@ -56,6 +58,8 @@
 		004C8D6D29AE45D600B65B22 /* NoteVC+setTextSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteVC+setTextSize.swift"; sourceTree = "<group>"; };
 		004C8D9929AFABE000B65B22 /* UIFont+ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+ex.swift"; sourceTree = "<group>"; };
 		004C8D9C29B085FD00B65B22 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		004C8DA529B217F500B65B22 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		004C8DA729B21B6400B65B22 /* NoteVC+textAdjusterTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteVC+textAdjusterTools.swift"; sourceTree = "<group>"; };
 		006A2B1C29A8F13500E2B7DC /* KeepNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		006A2B1F29A8F13500E2B7DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		006A2B2329A8F13500E2B7DC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 		004C8D9729AFABAB00B65B22 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				004C8DA429B217DE00B65B22 /* Singleton */,
 				004C8D9829AFABB500B65B22 /* UIFont+ex */,
 			);
 			path = Helper;
@@ -124,6 +129,14 @@
 				004C8D9C29B085FD00B65B22 /* NoteModel.swift */,
 			);
 			path = NoteModel;
+			sourceTree = "<group>";
+		};
+		004C8DA429B217DE00B65B22 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				004C8DA529B217F500B65B22 /* Singleton.swift */,
+			);
+			path = Singleton;
 			sourceTree = "<group>";
 		};
 		006A2B1329A8F13500E2B7DC = {
@@ -301,6 +314,7 @@
 				00C92B7729ACE69B0090054D /* NoteVC+fontButtonAction.swift */,
 				004C8D6B29AE453D00B65B22 /* NoteVC+configurePickers.swift */,
 				004C8D6D29AE45D600B65B22 /* NoteVC+setTextSize.swift */,
+				004C8DA729B21B6400B65B22 /* NoteVC+textAdjusterTools.swift */,
 			);
 			path = NoteVC;
 			sourceTree = "<group>";
@@ -487,6 +501,7 @@
 				006A2B7429A9F55800E2B7DC /* CoreDataManager.swift in Sources */,
 				006A2B3F29A8F61E00E2B7DC /* AppCoordinator.swift in Sources */,
 				000C24BC29ABA5C90096C82C /* NoteVC+showDataOnScreen.swift in Sources */,
+				004C8DA629B217F500B65B22 /* Singleton.swift in Sources */,
 				006A2B5F29A9137100E2B7DC /* NoteViewController.swift in Sources */,
 				006A2B5029A903B000E2B7DC /* ScheduleViewController.swift in Sources */,
 				006A2B6829A91E7000E2B7DC /* LoginVC+bind.swift in Sources */,
@@ -505,6 +520,7 @@
 				006A2B7829A9FFAB00E2B7DC /* Note+CoreDataProperties.swift in Sources */,
 				006A2B6629A91B3900E2B7DC /* NoteVC+constraints.swift in Sources */,
 				006A2B6229A913B200E2B7DC /* NoteViewModel.swift in Sources */,
+				004C8DA829B21B6400B65B22 /* NoteVC+textAdjusterTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
