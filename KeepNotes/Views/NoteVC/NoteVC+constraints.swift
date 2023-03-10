@@ -15,7 +15,7 @@ extension NoteViewController {
         fontStackView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(120)
             make.leading.trailing.equalToSuperview().inset(25)
-            make.width.equalTo(150)
+//            make.width.equalTo(150)
             make.height.equalTo(40)
         }
 
@@ -37,5 +37,8 @@ extension NoteViewController {
             make.width.equalTo(200)
             make.height.equalTo(60)
         }
+
+        
     }
+
 }

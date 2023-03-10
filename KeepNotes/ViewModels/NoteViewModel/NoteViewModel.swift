@@ -12,6 +12,13 @@ class NoteViewModel {
 
     var myNote: Note?
     var noteState: NoteModel?
+
+    var boldFlag = false
+    var italicFlag = false
+    var underlineFlag = false
+    var colorFlag = false
+    var sizeFlag = false
+
     //    var size: Int?
     //    var state: String?
     //    var descriptor: UIFontDescriptor?
